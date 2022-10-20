@@ -1,4 +1,4 @@
-# Viral Ecology of Avian Influenza of Waterfowl in the Central Valley of California using MinION Sequencing
+# Viral Ecology of Avian Influenza Viruses in Waterfowl of the Central Valley of California using MinION Sequencing
 This github repository includes code (and links to data) from the manuscript:  
 "Prevalence and Viral Ecology of Avian Influenza of Waterfowl in the Central Valley of California"  
 Madeline M. McCuen | Maurice E. Pitesky | Jeff J. Buler | Sarai Acosta | Alexander Wilcox | Ronald F. Bond | Samuel L. Díaz-Muñoz
