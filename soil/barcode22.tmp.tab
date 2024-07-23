@@ -1,0 +1,55 @@
+>gb:CY079411|Organism:Influenza A virus (A/American coot/Mississippi/09OS615/2009(H10N3))|Strain Name:A/American coot/Mississippi/09OS615/2009|Segment:1|Subtype:H10N3|Host:Avian
+>gb:KX960435|Organism:Influenza A virus (A/blue-winged teal/Guatemala/CIP049H108-04/2012(H14N3))|Strain Name:A/blue-winged teal/Guatemala/CIP049H108-04/2012|Segment:1|Subtype:H14N3|Host:Blue-Winged Teal
+>gb:CY178550|Organism:Influenza A virus (A/blue-winged teal/Saskatchewan/75/1982(H3N8))|Strain Name:A/blue-winged teal/Saskatchewan/75/1982|Segment:1|Subtype:H3N8|Host:Blue-Winged Teal
+>gb:MG957608|Organism:Influenza A virus|Strain Name:A/chicken/Bangladesh/32041/2017|Segment:7|Subtype:mixed|Host:Chicken
+>gb:DQ997179|Organism:Influenza A virus (A/chicken/Jiangsu/cz1/2002(H5N1))|Strain Name:A/chicken/Jiangsu/cz1/2002|Segment:7|Subtype:H5N1|Host:Chicken
+>gb:HM346516|Organism:Influenza A virus (A/chicken/Karachi/NARC-100/2004(H7N3))|Strain Name:A/chicken/Karachi/NARC-100/2004|Segment:1|Subtype:H7N3|Host:Chicken
+>gb:DQ529292|Organism:Influenza A virus (A/chicken/Nigeria/641/2006(H5N1))|Strain Name:A/chicken/NIGERIA/641/2006|Segment:1|Subtype:H5N1|Host:Chicken
+>gb:CY126193|Organism:Influenza A virus (A/chicken/Qalubia/CAI20/2008(H5N1))|Strain Name:A/chicken/Qalubia/CAI20/2008|Segment:7|Subtype:H5N1|Host:Chicken
+>gb:LC332520|Organism:Influenza A virus (A/duck/Hokkaido/15/2015(H3N8))|Strain Name:A/duck/Hokkaido/15/2015|Segment:1|Subtype:H3N8|Host:Waterfowl
+>gb:GQ257447|Organism:Influenza A virus (A/duck/Memphis/546/1974(H11N9))|Strain Name:A/duck/Memphis/546/1974|Segment:1|Subtype:H11N9|Host:Duck
+>gb:LC121265|Organism:Influenza A virus (A/duck/Mongolia/127/2015(H4N6))|Strain Name:A/duck/Mongolia/127/2015|Segment:1|Subtype:H4N6|Host:Mallard
+>gb:KJ889434|Organism:Influenza A virus (A/duck/Schleswig/21/1979(H1N1))|Strain Name:A/duck/Schleswig/21/1979|Segment:7|Subtype:H1N1|Host:Duck
+>gb:KU646914|Organism:Influenza A virus (A/duck/Taiwan/A3400/2015(H5N8))|Strain Name:A/duck/Taiwan/A3400/2015|Segment:1|Subtype:H5N8|Host:Duck
+>gb:MF155629|Organism:Influenza A virus (A/grey heron/W779/2017(H5N8))|Strain Name:A/grey heron/W779/2017|Segment:1|Subtype:H5N8|Host:Grey Heron
+>gb:AY650276|Organism:Influenza A virus (A/GSC_chicken/British Columbia/04(H7N3))|Strain Name:A/GSC_chicken/British Columbia/04|Segment:1|Subtype:H7N3|Host:Chicken
+>gb:KX978055|Organism:Influenza A virus (A/mallard duck/Netherlands/29/2008(H11N9))|Strain Name:A/mallard duck/Netherlands/29/2008|Segment:7|Subtype:H11N9|Host:Mallard
+>gb:MH411808|Organism:Influenza A virus|Strain Name:A/mallard/Alberta/47/2017|Segment:1|Subtype:H3N8|Host:Mallard
+>gb:HM144893|Organism:Influenza A virus (A/mallard/Jiangxi/6285/2004(H6N8))|Strain Name:A/mallard/Jiangxi/6285/2004|Segment:7|Subtype:H6N8|Host:Mallard
+>gb:CY140409|Organism:Influenza A virus (A/mallard/Minnesota/Sg-00836/2008(mixed))|Strain Name:A/mallard/Minnesota/Sg-00836/2008|Segment:1|Subtype:mixed|Host:Mallard
+>gb:CY045288|Organism:Influenza A virus (A/mallard/Quebec/11063/2006(H2N3))|Strain Name:A/mallard/Quebec/11063/2006|Segment:7|Subtype:H2N3|Host:Mallard
+>gb:CY185424|Organism:Influenza A virus (A/mallard/Republic of Georgia/1/2010(H10N7))|Strain Name:A/mallard/Republic of Georgia/1/2010|Segment:1|Subtype:H10N7|Host:Mallard
+>gb:CY117140|Organism:Influenza A virus (A/mallard/Stralsund/55-6/1981(H2N3))|Strain Name:A/mallard/Stralsund/55-6/1981|Segment:7|Subtype:H2N3|Host:Mallard
+>gb:CY165378|Organism:Influenza A virus (A/mallard/Sweden/79333/2008(H4N2))|Strain Name:A/mallard/Sweden/79333/2008|Segment:7|Subtype:H4N2|Host:Mallard
+>gb:CY184511|Organism:Influenza A virus (A/mallard/Sweden/885/2002(H7N7))|Strain Name:A/mallard/Sweden/885/2002|Segment:1|Subtype:H7N7|Host:Mallard
+>gb:CY180274|Organism:Influenza A virus (A/mallard/Wisconsin/144/1979(H3N8))|Strain Name:A/mallard/Wisconsin/144/1979|Segment:1|Subtype:H3N8|Host:Mallard
+>gb:CY179786|Organism:Influenza A virus (A/mallard/Wisconsin/42/1975(H5N2))|Strain Name:A/mallard/Wisconsin/42/1975|Segment:1|Subtype:H5N2|Host:Mallard
+>gb:CY140154|Organism:Influenza A virus (A/northern pintail/North Dakota/Sg-00749/2008(mixed))|Strain Name:A/northern pintail/North Dakota/Sg-00749/2008|Segment:7|Subtype:mixed|Host:Northern Pintail
+>gb:CY135778|Organism:Influenza A virus (A/northern shoveler/Interior Alaska/10BM05491R0/2010(H3N8))|Strain Name:A/northern shoveler/Interior Alaska/10BM05491R0/2010|Segment:1|Subtype:H3N8|Host:Northern Shoveler
+>gb:JX069102|Organism:Influenza A virus (A/ostrich/South Africa/AI2887/2011(H1N2))|Strain Name:A/ostrich/South Africa/AI2887/2011|Segment:1|Subtype:H1N2|Host:Ostrich
+>gb:CY005330|Organism:Influenza A virus (A/pintail/Alberta/84/2000(H11N9))|Strain Name:A/pintail/Alberta/84/2000|Segment:1|Subtype:H11N9|Host:Pintail
+>gb:CY042423|Organism:Influenza A virus (A/ruddy turnstone/New Jersey/Sg-00482/2008(H6N8))|Strain Name:A/ruddy turnstone/New Jersey/Sg-00482/2008|Segment:2|Subtype:H6N8|Host:Ruddy Turnstone
+>gb:CY240827|Organism:Influenza A virus (A/ruddy turnstone/New Jersey/UGAI16-1558/2016(mixed))|Strain Name:A/ruddy turnstone/New Jersey/UGAI16-1558/2016|Segment:1|Subtype:mixed|Host:Ruddy Turnstone
+>gb:CY102640|Organism:Influenza A virus (A/shorebird/Delaware Bay/277/2000(H9N7))|Strain Name:A/shorebird/Delaware Bay/277/2000|Segment:1|Subtype:H9N7|Host:Shorebird
+>gb:CY126514|Organism:Influenza A virus (A/shorebird/Delaware Bay/91/1999(mixed))|Strain Name:A/shorebird/Delaware Bay/91/1999|Segment:1|Subtype:mixed|Host:Shorebird
+>gb:KP412435|Organism:Influenza A virus (A/sparrow/Shanghai/09/2013(H9N2))|Strain Name:A/sparrow/Shanghai/09/2013|Segment:7|Subtype:H9N2|Host:Sparrow
+>gb:MF147767|Organism:Influenza A virus (A/tufted duck/Georgia/1/2012(H2N3))|Strain Name:A/tufted duck/Georgia/1/2012|Segment:1|Subtype:H2N3|Host:Tufted Duck
+>gb:KY684292|Organism:Influenza A virus (A/turkey/Indiana/16-001403-2/2016(H7N8))|Strain Name:A/turkey/Indiana/16-001403-2/2016|Segment:1|Subtype:H7N8|Host:Turkey
+>gb:MH546991|Organism:Influenza A virus|Strain Name:A/turkey/Minnesota/16-009265-3/2016|Segment:8|Subtype:H1N1|Host:Turkey
+>gb:MH546988|Organism:Influenza A virus|Strain Name:A/turkey/Minnesota/16-009265-3/2016|Segment:5|Subtype:H1N1|Host:Turkey
+>gb:MH546997|Organism:Influenza A virus|Strain Name:A/turkey/Missouri/16-009707-1/2016|Segment:6|Subtype:H1N1|Host:Turkey
+>gb:EU735833|Organism:Influenza A virus (A/turkey/North Carolina/353568/2005(H3N2))|Strain Name:A/turkey/North Carolina/353568/2005|Segment:1|Subtype:H3N2|Host:Turkey
+>gb:EU735822|Organism:Influenza A virus (A/turkey/Ohio/313053/2004(H3N2))|Strain Name:A/turkey/Ohio/313053/2004|Segment:8|Subtype:H3N2|Host:Turkey
+>gb:JN683632|Organism:Influenza A virus (A/turkey/Ontario/FAV-9/2011(H3N2))|Strain Name:A/turkey/Ontario/FAV-9/2011|Segment:7|Subtype:H3N2|Host:Turkey
+>gb:HM370964|Organism:Influenza A virus (A/turkey/Ontario/FAV110/2009(H1N1))|Strain Name:A/turkey/Ontario/FAV110/2009|Segment:8|Subtype:H1N1|Host:Turkey
+>gb:HM370962|Organism:Influenza A virus (A/turkey/Ontario/FAV110/2009(H1N1))|Strain Name:A/turkey/Ontario/FAV110/2009|Segment:6|Subtype:H1N1|Host:Turkey
+>gb:HM370978|Organism:Influenza A virus (A/turkey/Ontario/FAV114-17/2009(H1N1))|Strain Name:A/turkey/Ontario/FAV114-17/2009|Segment:7|Subtype:H1N1|Host:Turkey
+>gb:HM370977|Organism:Influenza A virus (A/turkey/Ontario/FAV114-17/2009(H1N1))|Strain Name:A/turkey/Ontario/FAV114-17/2009|Segment:6|Subtype:H1N1|Host:Turkey
+>gb:HM370972|Organism:Influenza A virus (A/turkey/Ontario/FAV114-17/2009(H1N1))|Strain Name:A/turkey/Ontario/FAV114-17/2009|Segment:1|Subtype:H1N1|Host:Turkey
+>gb:HM370976|Organism:Influenza A virus (A/turkey/Ontario/FAV114-17/2009(H1N1))|Strain Name:A/turkey/Ontario/FAV114-17/2009|Segment:5|Subtype:H1N1|Host:Turkey
+>gb:HM370979|Organism:Influenza A virus (A/turkey/Ontario/FAV114-17/2009(H1N1))|Strain Name:A/turkey/Ontario/FAV114-17/2009|Segment:8|Subtype:H1N1|Host:Turkey
+>gb:KM244078|Organism:Influenza A virus (A/turkey/Virginia/4135/2014(H1N1))|Strain Name:A/turkey/Virginia/4135/2014|Segment:6|Subtype:H1N1|Host:Turkey
+>gb:JX454697|Organism:Influenza A virus (A/wild duck/Korea/CSM4-28/2010(H4N6))|Strain Name:A/wild duck/Korea/CSM4-28/2010|Segment:1|Subtype:H4N6|Host:Duck
+>gb:KF972090|Organism:Influenza A virus (A/wild waterfowl/Dongting/PC2559/2012(H9N2))|Strain Name:A/wild waterfowl/Dongting/PC2559/2012|Segment:1|Subtype:H9N2|Host:Waterfowl
+>gb:KF972098|Organism:Influenza A virus (A/wild waterfowl/Dongting/PC2560/2012(H9N2))|Strain Name:A/wild waterfowl/Dongting/PC2560/2012|Segment:1|Subtype:H9N2|Host:Waterfowl
+>gb:KX254922|Organism:Influenza A virus (A/yellow-billed pintail/Chile/6/2013(H4N6))|Strain Name:A/yellow-billed pintail/Chile/6/2013|Segment:1|Subtype:H4N6|Host:Yellow-Billed Pintail

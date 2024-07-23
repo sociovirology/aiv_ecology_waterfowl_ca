@@ -1,0 +1,121 @@
+﻿sample_label,Wildlife Management Unit,Pond,Sample Site (A-E),Use Level,Date ,Time,Sample Type,Filtered?
+S_10.2_A,Sacramento National Wildlife Refuge,10.2,A,High,8132021,1147,Water,Y
+S_10.2_B,Sacramento National Wildlife Refuge,10.2,B,High,8132021,1232,Water,Y
+S_10.2_C,Sacramento National Wildlife Refuge,10.2,C,High,8132021,1208,Water,Y
+S_10.2_D,Sacramento National Wildlife Refuge,10.2,D,High,8132021,1249,Water,Y
+S_10.2_E,Sacramento National Wildlife Refuge,10.2,E,High,8132021,1305,Water,Y
+S_10.2_SW,Sacramento National Wildlife Refuge,10.2,,High,8132021,,Water,N
+S_4_A,Sacramento National Wildlife Refuge,4,A,High,8132021,1401,Water,Y
+S_4_B,Sacramento National Wildlife Refuge,4,B,High,8132021,1420,Water,Y
+S_4_C,Sacramento National Wildlife Refuge,4,C,High,8132021,1434,Water,Y
+S_4_D,Sacramento National Wildlife Refuge,4,D,High,8132021,1450,Water,Y
+S_4_E,Sacramento National Wildlife Refuge,4,E,High,8132021,1458,Water,Y
+S_4_SW,Sacramento National Wildlife Refuge,4,,High,8132021,,Water,N
+S_16.2_A,Sacramento National Wildlife Refuge,16.2,A,Low,8202021,1057,Water,Y
+S_16.2_B,Sacramento National Wildlife Refuge,16.2,B,Low,8202021,1110,Water,Y
+S_16.2_C,Sacramento National Wildlife Refuge,16.2,C,Low,8202021,1126,Water,Y
+S_16.2_D,Sacramento National Wildlife Refuge,16.2,D,Low,8202021,1139,Water,Y
+S_16.2_E,Sacramento National Wildlife Refuge,16.2,E,Low,8202021,1148,Water,Y
+S_16.2_SW,Sacramento National Wildlife Refuge,16.2,,Low,8202021,,Water,N
+D_20.2_A,Delevan National Wildlife Refuge,20.2,A,High,8102021,836,Water,Y
+D_20.2_B,Delevan National Wildlife Refuge,20.2,B,High,8102021,905,Water,Y
+D_20.2_C,Delevan National Wildlife Refuge,20.2,C,High,8102021,929,Water,Y
+D_20.2_D,Delevan National Wildlife Refuge,20.2,D,High,8102021,956,Water,Y
+D_20.2_E,Delevan National Wildlife Refuge,20.2,E,High,8102021,1030,Water,Y
+D_20.2_SW,Delevan National Wildlife Refuge,20.2,,High,8102021,,Water,N
+D_44.2_A,Delevan National Wildlife Refuge,44.2,A,High,8132021,919,Water,Y
+D_44.2_B,Delevan National Wildlife Refuge,44.2,B,High,8132021,935,Water,Y
+D_44.2_C,Delevan National Wildlife Refuge,44.2,C,High,8132021,1004,Water,Y
+D_44.2_D,Delevan National Wildlife Refuge,44.2,D,High,8132021,1031,Water,Y
+D_44.2_E,Delevan National Wildlife Refuge,44.2,E,High,8132021,1049,Water,Y
+D_44.2_SW,Delevan National Wildlife Refuge,44.2,,High,8132021,,Water,N
+D_6_A,Delevan National Wildlife Refuge,6,A,High,8182021,917,Water,Y
+D_6_B,Delevan National Wildlife Refuge,6,B,High,8182021,949,Water,Y
+D_6_C,Delevan National Wildlife Refuge,6,C,High,8182021,1013,Water,Y
+D_6_D,Delevan National Wildlife Refuge,6,D,High,8182021,1038,Water,Y
+D_6_E,Delevan National Wildlife Refuge,6,E,High,8182021,1053,Water,Y
+D_6_SW,Delevan National Wildlife Refuge,6,,High,8182021,,Water,N
+D_27.5_A,Delevan National Wildlife Refuge,27.5,A,Low,8182021,1117,Water,Y
+D_27.5_B,Delevan National Wildlife Refuge,27.5,B,Low,8182021,1139,Water,Y
+D_27.5_C,Delevan National Wildlife Refuge,27.5,C,Low,8182021,1202,Water,Y
+D_27.5_D,Delevan National Wildlife Refuge,27.5,D,Low,8182021,1212,Water,Y
+D_27.5_E,Delevan National Wildlife Refuge,27.5,E,Low,8182021,1223,Water,Y
+D_27.5_SW,Delevan National Wildlife Refuge,27.5,,Low,8182021,,Water,N
+CT_27.1_A,Colusa National Wildlife Refuge,27.1,A,Low,8202021,921,Water,Y
+CT_27.1_B,Colusa National Wildlife Refuge,27.1,B,Low,8202021,921,Water,Y
+CT_27.1_C,Colusa National Wildlife Refuge,27.1,C,Low,8202021,948,Water,Y
+CT_27.1_D,Colusa National Wildlife Refuge,27.1,D,Low,8202021,950,Water,Y
+CT_27.1_E,Colusa National Wildlife Refuge,27.1,E,Low,8202021,1014,Water,Y
+CT_27.1_SW,Colusa National Wildlife Refuge,27.1,,Low,8202021,,Water,N
+CT_24.7_A,Colusa National Wildlife Refuge,24.7,A,Low,8272021,858,Water,Y
+CT_24.7_B,Colusa National Wildlife Refuge,24.7,B,Low,8272021,937,Water,Y
+CT_24.7_C,Colusa National Wildlife Refuge,24.7,C,Low,8272021,950,Water,Y
+CT_24.7_D,Colusa National Wildlife Refuge,24.7,D,Low,8272021,1008,Water,Y
+CT_24.7_E,Colusa National Wildlife Refuge,24.7,E,Low,8272021,1000,Water,Y
+CT_24.7_SW,Colusa National Wildlife Refuge,24.7,,Low,8272021,,Water,N
+CT_24.8_A,Colusa National Wildlife Refuge,24.8,A,Low,8272021,822,Water,Y
+CT_24.8_B,Colusa National Wildlife Refuge,24.8,B,Low,8272021,838,Water,Y
+CT_24.8_C,Colusa National Wildlife Refuge,24.8,C,Low,8272021,848,Water,Y
+CT_24.8_D,Colusa National Wildlife Refuge,24.8,D,Low,8272021,908,Water,Y
+CT_24.8_E,Colusa National Wildlife Refuge,24.8,E,Low,8272021,920,Water,Y
+CT_24.8_SW,Colusa National Wildlife Refuge,24.8,,Low,8272021,,Water,N
+H_204A_A,Howard Slough State Wildlife Unit,204A,A,High,8312021,1020,Water,Y
+H_204A_B,Howard Slough State Wildlife Unit,204A,B,High,8312021,1027,Water,Y
+H_204A_C,Howard Slough State Wildlife Unit,204A,C,High,8312021,1036,Water,Y
+H_204A_D,Howard Slough State Wildlife Unit,204A,D,High,8312021,1047,Water,Y
+H_204A_E,Howard Slough State Wildlife Unit,204A,E,High,8312021,1056,Water,Y
+H_204A_SW,Howard Slough State Wildlife Unit,204A,,High,8312021,,Water,N
+H_204B_A,Howard Slough State Wildlife Unit,204B,A,High,8252021,928,Water,Y
+H_204B_B,Howard Slough State Wildlife Unit,204B,B,High,8252021,940,Water,Y
+H_204B_C,Howard Slough State Wildlife Unit,204B,C,High,8252021,1000,Water,Y
+H_204B_D,Howard Slough State Wildlife Unit,204B,D,High,8252021,1011,Water,Y
+H_204B_E,Howard Slough State Wildlife Unit,204B,E,High,8252021,1027,Water,Y
+H_204B_SW,Howard Slough State Wildlife Area,204B,,High,8252021,,Water,N
+H_204C_A,Howard Slough State Wildlife Area,204C,A,High,8312021,924,Water,Y
+H_204C_B,Howard Slough State Wildlife Area,204C,B,High,8312021,933,Water,Y
+H_204C_C,Howard Slough State Wildlife Area,204C,C,High,8312021,941,Water,Y
+H_204C_D,Howard Slough State Wildlife Area,204C,D,High,8312021,952,Water,Y
+H_204C_E,Howard Slough State Wildlife Area,204C,E,High,8312021,1006,Water,Y
+H_204C_SW,Howard Slough State Wildlife Area,204C,,High,8312021,,Water,N
+L_108B_A,Little Dry Creek State Wildlife Area,108B,A,Low,8252021,1130,Water,Y
+L_108B_B,Little Dry Creek State Wildlife Area,108B,B,Low,8252021,1154,Water,Y
+L_108B_C,Little Dry Creek State Wildlife Area,108B,C,Low,8252021,1214,Water,Y
+L_108B_D,Little Dry Creek State Wildlife Area,108B,D,Low,8252021,1224,Water,Y
+L_108B_E,Little Dry Creek State Wildlife Area,108B,E,Low,8252021,1232,Water,Y
+L_108B_SW,Little Dry Creek State Wildlife Area,108B,,Low,8252021,,Water,N
+G_36_A,Gray Lodge State Wildlife Area,36,A,Low,9032021,849,Water,Y
+G_36_B,Gray Lodge State Wildlife Area,36,B,Low,9032021,858,Water,Y
+G_36_C,Gray Lodge State Wildlife Area,36,C,Low,9032021,910,Water,Y
+G_36_D,Gray Lodge State Wildlife Area,36,D,Low,9032021,920,Water,Y
+G_36_E,Gray Lodge State Wildlife Area,36,E,Low,9032021,933,Water,Y
+G_36_SW,Gray Lodge State Wildlife Area,36,,Low,9032021,,Water,N
+G_18_A,Gray Lodge State Wildlife Area,18,A,High,9032021,956,Water,Y
+G_18_B,Gray Lodge State Wildlife Area,18,B,High,9032021,1007,Water,Y
+G_18_C,Gray Lodge State Wildlife Area,18,C,High,9032021,1018,Water,Y
+G_18_D,Gray Lodge State Wildlife Area,18,D,High,9032021,1026,Water,Y
+G_18_E,Gray Lodge State Wildlife Area,18,E,High,9032021,1037,Water,Y
+G_18_SW,Gray Lodge State Wildlife Area,18,,High,9032021,,Water,N
+G_10_A,Gray Lodge State Wildlife Area,10,A,High,9082021,843,Water,Y
+G_10_B,Gray Lodge State Wildlife Area,10,B,High,9082021,853,Water,Y
+G_10_C,Gray Lodge State Wildlife Area,10,C,High,9082021,900,Water,Y
+G_10_D,Gray Lodge State Wildlife Area,10,D,High,9082021,908,Water,Y
+G_10_E,Gray Lodge State Wildlife Area,10,E,High,9082021,915,Water,Y
+G_10_SW,Gray Lodge State Wildlife Area,10,,High,9082021,,Water,N
+G_54_A,Gray Lodge State Wildlife Area,54,A,Low,9082021,942,Water,Y
+G_54_B,Gray Lodge State Wildlife Area,54,B,Low,9082021,954,Water,Y
+G_54_C,Gray Lodge State Wildlife Area,54,C,Low,9082021,1002,Water,Y
+G_54_D,Gray Lodge State Wildlife Area,54,D,Low,9082021,1012,Water,Y
+G_54_E,Gray Lodge State Wildlife Area,54,E,Low,9082021,1021,Water,Y
+G_54_SW,Gray Lodge State Wildlife Area,54,,Low,9082021,,Water,N
+G_65_A,Gray Lodge State Wildlife Area,65,A,Low,9102021,856,Water,Y
+G_65_B,Gray Lodge State Wildlife Area,65,B,Low,9102021,903,Water,Y
+G_65_C,Gray Lodge State Wildlife Area,65,C,Low,9102021,914,Water,Y
+G_65_D,Gray Lodge State Wildlife Area,65,D,Low,9102021,923,Water,Y
+G_65_E,Gray Lodge State Wildlife Area,65,E,Low,9102021,936,Water,Y
+G_65_SW,Gray Lodge State Wildlife Area,65,,Low,9102021,,Water,N
+G_66_A,Gray Lodge State Wildlife Area,66,A,Low,9102021,958,Water,Y
+G_66_B,Gray Lodge State Wildlife Area,66,B,Low,9102021,1009,Water,Y
+G_66_C,Gray Lodge State Wildlife Area,66,C,Low,9102021,1017,Water,Y
+G_66_D,Gray Lodge State Wildlife Area,66,D,Low,9102021,1036,Water,Y
+G_66_E,Gray Lodge State Wildlife Area,66,E,Low,9102021,1051,Water,Y
+G_66_SW,Gray Lodge State Wildlife Area,66,,Low,9102021,,Water,N

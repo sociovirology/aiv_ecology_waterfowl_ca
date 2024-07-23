@@ -1,0 +1,331 @@
+# Viral Ecology of Avian Influenza Viruses in Waterfowl of the Central Valley of California using MinION Sequencing
+
+Transferring demultiplexed water reads from Rosalind to my computer (so I can then transfer to Crick)
+
+```{bash}
+scp -rp ssh user@169.237.98.13:/home/user/Desktop/Pitesky_Water_Samples1_Winter_2021/Pitesky_Water_Samples1_2021/20220211_1428_MN23913_FAS19958_ecba99ae/fastq_sac_cd/demultiplexed_split_pass/* /Users/mixtup/Dropbox/mixtup/Documentos/ucdavis/papers/aiv_waterfowl_california_central_valley_2021/Pitesky_Water_Samples1_Winter_2021 
+```
+
+Now going from my computer to Crick
+
+```{bash}
+scp -rp /Users/mixtup/Dropbox/mixtup/Documentos/ucdavis/papers/aiv_waterfowl_california_central_valley_2021/Pitesky_Water_Samples1_Winter_2021 sldmunoz@crick.cse.ucdavis.edu:/home/sldmunoz/aiv_ecology_waterfowl_ca
+```
+
+Transferring water run data from my computer to Rosalind (so I can then transfer to Crick)
+
+```{bash}
+scp -rp /Users/mixtup/MinION_reads/Pitesky_Soil_Samples_Winter_2021 /Pitesky_Water_Samples1_Winter_2021 user@169.237.98.13:/mnt/data0/MinION_reads/
+```
+
+Transferring soil raw run data from my computer to Rosalind to basecall and demultiplex
+
+```{bash}
+scp -rp /Users/mixtup/MinION_reads/Pitesky_Soil_Samples_Winter_2021 /Pitesky_Water_Samples1_Winter_2021 user@169.237.98.13:/mnt/data0/MinION_reads/
+```
+
+Now need to basecall Soil Data on Rosalind
+
+```{bash}
+#Pitesky Soil Sample Summer 2021 Basecalling
+~/ont-guppy/bin/guppy_basecaller --input_path /mnt/data0/MinION_reads/Pitesky_Soil_Samples_Winter_2021/ --save_path /mnt/data0/sam/Pitesky_Soil_Samples_Winter_2021/fastq_hac --config dna_r10.4_e8.1_hac.cfg -x cuda:all:100% --num_callers 256 --recursive --calib_detect
+```
+
+Now demultiplex Soil Data on Rosalind
+
+```{bash}
+#Pitesky Soil Sample Summer 2021 Demultiplexing
+~/ont-guppy/bin/guppy_barcoder --require_barcodes_both_ends --input_path /mnt/data0/sam/Pitesky_Soil_Samples_Winter_2021/fastq_hac/pass/ --save_path /mnt/data0/sam/Pitesky_Soil_Samples_Winter_2021/fastq_hac/pass/double_barcodes/ --detect_mid_strand_barcodes --min_score_rear_override 45 --barcode_kits EXP-PBC096 -x cuda:all:100% --worker_threads 16
+```
+
+Now move the demultiplexed soil sample FASTQs from Rosalind to my computer (so I can then transfer to Crick)
+
+```{bash}
+scp -rp user@169.237.98.13:/mnt/data0/sam/Pitesky_Soil_Samples_Winter_2021/fastq_hac/pass/double_barcodes/* /Users/mixtup/Dropbox/mixtup/Documentos/ucdavis/papers/aiv_waterfowl_california_central_valley_2021/Pitesky_Soil_Samples_Winter_2021 
+```
+
+Finally, get the soil FASTQ's uploaded from my computer to Crick
+
+```{bash}
+scp -rp /Users/mixtup/Dropbox/mixtup/Documentos/ucdavis/papers/aiv_waterfowl_california_central_valley_2021/Pitesky_Soil_Samples_Winter_2021 sldmunoz@crick.cse.ucdavis.edu:/home/sldmunoz/aiv_ecology_waterfowl_ca
+```
+
+
+
+Now analyze water samples in Crick. Use the pipeline from McCuen et al. Actually need to update for MinION data. Using a modified version of what I used for Ile's DI sequencing
+
+```{bash}
+ssh sldmunoz@crick.cse.ucdavis.edu
+srun -t12:00:00 -c6 --mem=30000 --pty /bin/bash
+
+#Concatenate all reads from one barcode into one fastq
+
+#Change into directory
+cd ~/aiv_ecology_waterfowl_ca/Pitesky_Water_Samples1_Winter_2021
+
+for barcode in *;
+do
+  cat ${barcode}/*.fastq > ${barcode}.fastq
+done
+
+#Check number of reads
+wc -l barcode*.fastq | awk '{print $1/4" " $2}'
+#Quite a lot of reads!
+
+conda activate gbbseq-env
+
+#This code loops through the concatenated FASTQ's and trims out ONT landing pad and uni primers 
+
+for file in *.fastq;
+do
+  prefix=${file%.fastq} #Get file name without extension
+  
+  #First get rid of ONT landing pad
+  cutadapt -a TTTCTGTTGGTGCTGATATTG...GAAGATAGAGCGACAGGCAAGT -a ACTTGCCTGTCGCTCTATCTTC...CAATATCAGCACCAACAGAAA -o ${prefix}_ont_landing_pad.fastq ${file} --discard-untrimmed > ${prefix}_ont_landing_pad.txt
+  
+done
+  
+#Report
+grep "Total written (filtered):" *_ont_landing_pad.txt
+
+for file in *_ont_landing_pad.fastq;
+do
+  prefix=${file%_ont_landing_pad.fastq} #Get file name without extension
+  
+  #Now check for well-formed uni primers and trim
+  cutadapt -a AGCAAAAGCAGG...CCTTGTTTCTACT -a AGTAGAAACAAGG...CCTGCTTTTGC -o ${prefix}_final.fastq ${file} --discard-untrimmed > ${prefix}_umi_trimmed.txt
+done
+
+  #Report
+  grep "Total written (filtered):" *_umi_trimmed.txt
+
+
+#Check outcome of trimming
+wc -l *_final.fastq | awk '{print $1/4" " $2}'
+
+```
+
+Upload avian flu data base to crick
+
+```{bash}
+scp -rp /Users/mixtup/Dropbox/mixtup/Documentos/ucdavis/papers/aiv_madeline_maurice/r_aiv_environment/aiv_detection_environment_github/data/all_avian_flu.fasta.gz sldmunoz@crick.cse.ucdavis.edu:/home/sldmunoz/aiv_ecology_waterfowl_ca/data/
+```
+
+Now need to interface with the old script from McCuen et al
+
+```{bash}
+conda deactivate 
+
+conda activate aiv_detection-env
+module load blast/2.2.29
+
+
+#Then convert to FASTA
+#next line doesn't work on OS X
+#sed -n '1~4s/^@/>/p;2~4p' aiv_env_all_filtered.fastq  > aiv_env_all_filtered.fasta
+
+for file in *_final.fastq;
+do
+  prefix=${file%_final.fastq} #Get file name without extension
+  seqtk seq -A ${prefix}_final.fastq > ${prefix}.fasta
+done
+
+#Demultiplexing complete. Now export text files to serve as input for downstream scripts
+#Export the reads assigned to each sample, remembering to divide by 2 because it's FASTA
+wc -l *.fasta | awk '{print $1/2" " $2}' | sed '$d' > demultiplexing_by_sample.txt
+```
+
+Now flu DB lookup 
+
+```{bash}
+#Now looking up sequences against all avian influenza virus whole genome sequences from FluDB
+
+#Unzip the FluDB FASTA which we will use to create the BLAST database downstream
+gunzip data/all_avian_flu.fasta.gz
+
+#Need to make a BLAST database using the FluDB
+#File is at data/all_avian_flu.fasta
+makeblastdb -in data/all_avian_flu.fasta -dbtype nucl -out all_avian_flu
+
+#This command uses GNU parallel to conduct BLAST searches in parallel for each demultiplexed file
+#First looking at forward read files
+ls *.fasta | awk -F'[.]' '{print $1}'| parallel -j+0 --eta 'blastn -db all_avian_flu -query {.}.fasta -out {.}.out  -max_target_seqs 1 -outfmt 6'
+
+#Export info to our report
+wc -l barcode*.out >> demultiplexing_assignment_report.txt
+
+#Now export text files to serve as input for downstream scripts
+
+#Now add the number of reads matching the avian flu database to the file avian_blast_matches.txt
+wc -l barcode*.out | awk '{print $1" " $2}' | sed '$d' > avian_blast_matches.txt
+
+#Finally look up metadata for the closest blast matches for each read
+#Now use the .out files to generate a list of GI's to lookup against database
+for file in barcode*.out; 
+do
+  awk '{print $2}' $file | awk -F ":" '{print $2}' | awk -F "|" '{print $1}' > ${file%.out}.tmp
+done
+
+#Use that file to get matches from the database
+for file in *.tmp; 
+do
+  grep -f $file data/all_avian_flu.fasta > "${file%.out}.tab"
+done
+```
+
+Now download the files locally to run the R script 
+
+```{bash}
+#First demultiplexing_by_sample.txt and avian_blast_matches.txt
+scp -rp sldmunoz@crick.cse.ucdavis.edu:/home/sldmunoz/aiv_ecology_waterfowl_ca/Pitesky_Water_Samples1_Winter_2021/demultiplexing_by_sample.txt /Users/mixtup/Dropbox/mixtup/Documentos/ucdavis/papers/aiv_waterfowl_california_central_valley_2021/aiv_ecology_waterfowl_ca/
+
+scp -rp sldmunoz@crick.cse.ucdavis.edu:/home/sldmunoz/aiv_ecology_waterfowl_ca/Pitesky_Water_Samples1_Winter_2021/avian_blast_matches.txt /Users/mixtup/Dropbox/mixtup/Documentos/ucdavis/papers/aiv_waterfowl_california_central_valley_2021/aiv_ecology_waterfowl_ca/
+
+#Now *.tab files
+scp -rp sldmunoz@crick.cse.ucdavis.edu:/home/sldmunoz/aiv_ecology_waterfowl_ca/Pitesky_Water_Samples1_Winter_2021/*.tab /Users/mixtup/Dropbox/mixtup/Documentos/ucdavis/papers/aiv_waterfowl_california_central_valley_2021/aiv_ecology_waterfowl_ca/
+
+#Now *.out files
+scp -rp sldmunoz@crick.cse.ucdavis.edu:/home/sldmunoz/aiv_ecology_waterfowl_ca/Pitesky_Water_Samples1_Winter_2021/*.out /Users/mixtup/Dropbox/mixtup/Documentos/ucdavis/papers/aiv_waterfowl_california_central_valley_2021/aiv_ecology_waterfowl_ca/
+
+```
+
+
+## Soil Samples 
+
+Now analyze soil samples in Crick in the same way.
+
+```{bash}
+ssh sldmunoz@crick.cse.ucdavis.edu
+srun -t12:00:00 -c6 --mem=30000 --pty /bin/bash
+
+#Concatenate all reads from one barcode into one fastq
+
+#Change into directory
+cd ~/aiv_ecology_waterfowl_ca/Pitesky_Soil_Samples_Winter_2021
+
+for barcode in *;
+do
+  cat ${barcode}/*.fastq > ${barcode}.fastq
+done
+
+#Check number of reads
+wc -l barcode*.fastq | awk '{print $1/4" " $2}'
+#Quite a lot of reads!
+
+conda activate gbbseq-env
+
+#This code loops through the concatenated FASTQ's and trims out ONT landing pad and uni primers 
+
+for file in barcode*.fastq;
+do
+  prefix=${file%.fastq} #Get file name without extension
+  
+  #First get rid of ONT landing pad
+  cutadapt -a TTTCTGTTGGTGCTGATATTG...GAAGATAGAGCGACAGGCAAGT -a ACTTGCCTGTCGCTCTATCTTC...CAATATCAGCACCAACAGAAA -o ${prefix}_ont_landing_pad.fastq ${file} --discard-untrimmed > ${prefix}_ont_landing_pad.txt
+  
+done
+  
+#Report
+grep "Total written (filtered):" *_ont_landing_pad.txt
+
+for file in *_ont_landing_pad.fastq;
+do
+  prefix=${file%_ont_landing_pad.fastq} #Get file name without extension
+  
+  #Now check for well-formed uni primers and trim
+  cutadapt -a AGCAAAAGCAGG...CCTTGTTTCTACT -a AGTAGAAACAAGG...CCTGCTTTTGC -o ${prefix}_final.fastq ${file} --discard-untrimmed > ${prefix}_umi_trimmed.txt
+done
+
+  #Report
+  grep "Total written (filtered):" *_umi_trimmed.txt
+
+
+#Check outcome of trimming
+wc -l *_final.fastq | awk '{print $1/4" " $2}'
+
+```
+
+Move avian flu data base to Soil Directory
+
+```{bash}
+mkdir data
+cp ../Pitesky_Water_Samples1_Winter_2021/data/all_avian_flu.fasta data/
+```
+
+Now need to interface with the old script from McCuen et al
+
+```{bash}
+conda deactivate 
+
+conda activate aiv_detection-env
+module load blast/2.2.29
+
+
+#Then convert to FASTA
+#next line doesn't work on OS X
+#sed -n '1~4s/^@/>/p;2~4p' aiv_env_all_filtered.fastq  > aiv_env_all_filtered.fasta
+
+for file in *_final.fastq;
+do
+  prefix=${file%_final.fastq} #Get file name without extension
+  seqtk seq -A ${prefix}_final.fastq > ${prefix}.fasta
+done
+
+#Demultiplexing complete. Now export text files to serve as input for downstream scripts
+#Export the reads assigned to each sample, remembering to divide by 2 because it's FASTA
+wc -l *.fasta | awk '{print $1/2" " $2}' | sed '$d' > demultiplexing_by_sample.txt
+```
+
+Now flu DB lookup 
+
+```{bash}
+#Now looking up sequences against all avian influenza virus whole genome sequences from FluDB
+
+#Unzip the FluDB FASTA which we will use to create the BLAST database downstream
+gunzip data/all_avian_flu.fasta.gz
+
+#Need to make a BLAST database using the FluDB
+#File is at data/all_avian_flu.fasta
+makeblastdb -in data/all_avian_flu.fasta -dbtype nucl -out all_avian_flu
+
+#This command uses GNU parallel to conduct BLAST searches in parallel for each demultiplexed file
+#First looking at forward read files
+ls *.fasta | awk -F'[.]' '{print $1}'| parallel -j+0 --eta 'blastn -db all_avian_flu -query {.}.fasta -out {.}.out  -max_target_seqs 1 -outfmt 6'
+
+#Export info to our report
+wc -l barcode*.out >> demultiplexing_assignment_report.txt
+
+#Now export text files to serve as input for downstream scripts
+
+#Now add the number of reads matching the avian flu database to the file avian_blast_matches.txt
+wc -l barcode*.out | awk '{print $1" " $2}' | sed '$d' > avian_blast_matches.txt
+
+#Finally look up metadata for the closest blast matches for each read
+#Now use the .out files to generate a list of GI's to lookup against database
+for file in barcode*.out; 
+do
+  awk '{print $2}' $file | awk -F ":" '{print $2}' | awk -F "|" '{print $1}' > ${file%.out}.tmp
+done
+
+#Use that file to get matches from the database
+for file in *.tmp; 
+do
+  grep -f $file data/all_avian_flu.fasta > "${file%.out}.tab"
+done
+```
+
+Now download the files locally to run the R script 
+
+```{bash}
+#First demultiplexing_by_sample.txt and avian_blast_matches.txt
+scp -rp sldmunoz@crick.cse.ucdavis.edu:/home/sldmunoz/aiv_ecology_waterfowl_ca/Pitesky_Soil_Samples_Winter_2021/demultiplexing_by_sample.txt /Users/mixtup/Dropbox/mixtup/Documentos/ucdavis/papers/aiv_waterfowl_california_central_valley_2021/aiv_ecology_waterfowl_ca/soil/
+
+scp -rp sldmunoz@crick.cse.ucdavis.edu:/home/sldmunoz/aiv_ecology_waterfowl_ca/Pitesky_Soil_Samples_Winter_2021/avian_blast_matches.txt /Users/mixtup/Dropbox/mixtup/Documentos/ucdavis/papers/aiv_waterfowl_california_central_valley_2021/aiv_ecology_waterfowl_ca/soil/
+
+#Now *.tab files
+scp -rp sldmunoz@crick.cse.ucdavis.edu:/home/sldmunoz/aiv_ecology_waterfowl_ca/Pitesky_Soil_Samples_Winter_2021/*.tab /Users/mixtup/Dropbox/mixtup/Documentos/ucdavis/papers/aiv_waterfowl_california_central_valley_2021/aiv_ecology_waterfowl_ca/soil/
+
+#Now *.out files
+scp -rp sldmunoz@crick.cse.ucdavis.edu:/home/sldmunoz/aiv_ecology_waterfowl_ca/Pitesky_Soil_Samples_Winter_2021/*.out /Users/mixtup/Dropbox/mixtup/Documentos/ucdavis/papers/aiv_waterfowl_california_central_valley_2021/aiv_ecology_waterfowl_ca/soil/
+
+```

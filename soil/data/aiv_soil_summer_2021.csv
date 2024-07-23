@@ -1,0 +1,101 @@
+﻿sample_label,Wildlife Management Unit,Pond,Sample Site (A-E),Use Level,Date ,Time,Sample Type
+S_10.2_A,Sacramento National Wildlife Refuge,10.2,A,High,8132021,1147,Soil
+S_10.2_B,Sacramento National Wildlife Refuge,10.2,B,High,8132021,1232,Soil
+S_10.2_C,Sacramento National Wildlife Refuge,10.2,C,High,8132021,1208,Soil
+S_10.2_D,Sacramento National Wildlife Refuge,10.2,D,High,8132021,1249,Soil
+S_10.2_E,Sacramento National Wildlife Refuge,10.2,E,High,8132021,1305,Soil
+S_4_A,Sacramento National Wildlife Refuge,4,A,High,8132021,1401,Soil
+S_4_B,Sacramento National Wildlife Refuge,4,B,High,8132021,1420,Soil
+S_4_C,Sacramento National Wildlife Refuge,4,C,High,8132021,1434,Soil
+S_4_D,Sacramento National Wildlife Refuge,4,D,High,8132021,1450,Soil
+S_4_E,Sacramento National Wildlife Refuge,4,E,High,8202021,1458,Soil
+S_16.2_A,Sacramento National Wildlife Refuge,16.2,A,Low,8202021,1057,Soil
+S_16.2_B,Sacramento National Wildlife Refuge,16.2,B,Low,8202021,1110,Soil
+S_16.2_C,Sacramento National Wildlife Refuge,16.2,C,Low,8202021,1126,Soil
+S_16.2_D,Sacramento National Wildlife Refuge,16.2,D,Low,8202021,1139,Soil
+S_16.2_E,Sacramento National Wildlife Refuge,16.2,E,Low,8202021,1148,Soil
+D_20.2_A,Delevan National Wildlife Refuge,20.2,A,High,8102021,836,Soil
+D_20.2_B,Delevan National Wildlife Refuge,20.2,B,High,8102021,905,Soil
+D_20.2_C,Delevan National Wildlife Refuge,20.2,C,High,8102021,929,Soil
+D_20.2_D,Delevan National Wildlife Refuge,20.2,D,High,8102021,956,Soil
+D_20.2_E,Delevan National Wildlife Refuge,20.2,E,High,8102021,1030,Soil
+D_44.2_A,Delevan National Wildlife Refuge,44.2,A,High,8132021,919,Soil
+D_44.2_B,Delevan National Wildlife Refuge,44.2,B,High,8132021,935,Soil
+D_44.2_C,Delevan National Wildlife Refuge,44.2,C,High,8132021,1004,Soil
+D_44.2_D,Delevan National Wildlife Refuge,44.2,D,High,8132021,1031,Soil
+D_44.2_E,Delevan National Wildlife Refuge,44.2,E,High,8132021,1049,Soil
+D_6_A,Delevan National Wildlife Refuge,6,A,High,8182021,917,Soil
+D_6_B,Delevan National Wildlife Refuge,6,B,High,8182021,949,Soil
+D_6_C,Delevan National Wildlife Refuge,6,C,High,8182021,1013,Soil
+D_6_D,Delevan National Wildlife Refuge,6,D,High,8182021,1038,Soil
+D_6_E,Delevan National Wildlife Refuge,6,E,High,8182021,1053,Soil
+D_27.5_A,Delevan National Wildlife Refuge,27.5,A,Low,8182021,1117,Soil
+D_27.5_B,Delevan National Wildlife Refuge,27.5,B,Low,8182021,1139,Soil
+D_27.5_C,Delevan National Wildlife Refuge,27.5,C,Low,8182021,1202,Soil
+D_27.5_D,Delevan National Wildlife Refuge,27.5,D,Low,8182021,1212,Soil
+D_27.5_E,Delevan National Wildlife Refuge,27.5,E,Low,8182021,1223,Soil
+CT_27.1_A,Colusa National Wildlife Refuge,27.1,A,Low,8202021,921,Soil
+CT_27.1_B,Colusa National Wildlife Refuge,27.1,B,Low,8202021,921,Soil
+CT_27.1_C,Colusa National Wildlife Refuge,27.1,C,Low,8202021,948,Soil
+CT_27.1_D,Colusa National Wildlife Refuge,27.1,D,Low,8202021,950,Soil
+CT_27.1_E,Colusa National Wildlife Refuge,27.1,E,Low,8202021,1014,Soil
+CT_24.7_A,Colusa National Wildlife Refuge,24.7,A,Low,8272021,858,Soil
+CT_24.7_B,Colusa National Wildlife Refuge,24.7,B,Low,8272021,937,Soil
+CT_24.7_C,Colusa National Wildlife Refuge,24.7,C,Low,8272021,950,Soil
+CT_24.7_D,Colusa National Wildlife Refuge,24.7,D,Low,8272021,1008,Soil
+CT_24.7_E,Colusa National Wildlife Refuge,24.7,E,Low,8272021,1000,Soil
+CT_24.8_A,Colusa National Wildlife Refuge,24.8,A,Low,8272021,822,Soil
+CT_24.8_B,Colusa National Wildlife Refuge,24.8,B,Low,8272021,838,Soil
+CT_24.8_C,Colusa National Wildlife Refuge,24.8,C,Low,8272021,848,Soil
+CT_24.8_D,Colusa National Wildlife Refuge,24.8,D,Low,8272021,908,Soil
+CT_24.8_E,Colusa National Wildlife Refuge,24.8,E,Low,8272021,920,Soil
+H_204A_A,Howard Slough State Wildlife Unit,204A,A,High,8312021,1020,Soil
+H_204A_B,Howard Slough State Wildlife Unit,204A,B,High,8312021,1027,Soil
+H_204A_C,Howard Slough State Wildlife Unit,204A,C,High,8312021,1036,Soil
+H_204A_D,Howard Slough State Wildlife Unit,204A,D,High,8312021,1047,Soil
+H_204A_E,Howard Slough State Wildlife Unit,204A,E,High,8312021,1056,Soil
+H_204B_A,Howard Slough State Wildlife Unit,204B,A,High,8252021,928,Soil
+H_204B_B,Howard Slough State Wildlife Unit,204B,B,High,8252021,940,Soil
+H_204B_C,Howard Slough State Wildlife Unit,204B,C,High,8252021,1000,Soil
+H_204B_D,Howard Slough State Wildlife Unit,204B,D,High,8252021,1011,Soil
+H_204B_E,Howard Slough State Wildlife Unit,204B,E,High,8252021,1027,Soil
+H_204C_A,Howard Slough State Wildlife Area,204C,A,High,8312021,924,Soil
+H_204C_B,Howard Slough State Wildlife Area,204C,B,High,8312021,933,Soil
+H_204C_C,Howard Slough State Wildlife Area,204C,C,High,8312021,941,Soil
+H_204C_D,Howard Slough State Wildlife Area,204C,D,High,8312021,952,Soil
+H_204C_E,Howard Slough State Wildlife Area,204C,E,High,8312021,1006,Soil
+L_108B_A,Little Dry Creek State Wildlife Area,108B,A,Low,8252021,1130,Soil
+L_108B_B,Little Dry Creek State Wildlife Area,108B,B,Low,8252021,1154,Soil
+L_108B_C,Little Dry Creek State Wildlife Area,108B,C,Low,8252021,1214,Soil
+L_108B_D,Little Dry Creek State Wildlife Area,108B,D,Low,8252021,1224,Soil
+L_108B_E,Little Dry Creek State Wildlife Area,108B,E,Low,8252021,1232,Soil
+G_36_A,Gray Lodge State Wildlife Area,36,A,Low,9032021,849,Soil
+G_36_B,Gray Lodge State Wildlife Area,36,B,Low,9032021,858,Soil
+G_36_C,Gray Lodge State Wildlife Area,36,C,Low,9032021,910,Soil
+G_36_D,Gray Lodge State Wildlife Area,36,D,Low,9032021,920,Soil
+G_36_E,Gray Lodge State Wildlife Area,36,E,Low,9032021,933,Soil
+G_18_A,Gray Lodge State Wildlife Area,18,A,High,9032021,956,Soil
+G_18_B,Gray Lodge State Wildlife Area,18,B,High,9032021,1007,Soil
+G_18_C,Gray Lodge State Wildlife Area,18,C,High,9032021,1018,Soil
+G_18_D,Gray Lodge State Wildlife Area,18,D,High,9032021,1026,Soil
+G_18_E,Gray Lodge State Wildlife Area,18,E,High,9032021,1037,Soil
+G_10_A,Gray Lodge State Wildlife Area,10,A,High,9082021,843,Soil
+G_10_B,Gray Lodge State Wildlife Area,10,B,High,9082021,853,Soil
+G_10_C,Gray Lodge State Wildlife Area,10,C,High,9082021,900,Soil
+G_10_D,Gray Lodge State Wildlife Area,10,D,High,9082021,908,Soil
+G_10_E,Gray Lodge State Wildlife Area,10,E,High,9082021,915,Soil
+G_54_A,Gray Lodge State Wildlife Area,54,A,Low,9082021,942,Soil
+G_54_B,Gray Lodge State Wildlife Area,54,B,Low,9082021,954,Soil
+G_54_C,Gray Lodge State Wildlife Area,54,C,Low,9082021,1002,Soil
+G_54_D,Gray Lodge State Wildlife Area,54,D,Low,9082021,1012,Soil
+G_54_E,Gray Lodge State Wildlife Area,54,E,Low,9082021,1021,Soil
+G_65_A,Gray Lodge State Wildlife Area,65,A,Low,9102021,856,Soil
+G_65_B,Gray Lodge State Wildlife Area,65,B,Low,9102021,903,Soil
+G_65_C,Gray Lodge State Wildlife Area,65,C,Low,9102021,914,Soil
+G_65_D,Gray Lodge State Wildlife Area,65,D,Low,9102021,923,Soil
+G_65_E,Gray Lodge State Wildlife Area,65,E,Low,9102021,936,Soil
+G_66_A,Gray Lodge State Wildlife Area,66,A,Low,9102021,958,Soil
+G_66_B,Gray Lodge State Wildlife Area,66,B,Low,9102021,1009,Soil
+G_66_C,Gray Lodge State Wildlife Area,66,C,Low,9102021,1017,Soil
+G_66_D,Gray Lodge State Wildlife Area,66,D,Low,9102021,1036,Soil
+G_66_E,Gray Lodge State Wildlife Area,66,E,Low,9102021,1051,Soil
