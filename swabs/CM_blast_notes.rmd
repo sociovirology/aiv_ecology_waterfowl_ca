@@ -1,0 +1,297 @@
+```{bash}
+#data file structure split into two 'samples' due to MinION error and stop during sequencing. sample directories labeled '20211216_1317_MN23913_FAR27359_f42a3dea/' and 'no_sample/'
+#basecall on separate raw data files first
+#basecall on pass and fail fast5's (no skip folder)
+#basecall with --calib_detect on
+
+#no_sample; pass
+~/ont-guppy/bin/guppy_basecaller --input_path /mnt/data0/MinION_reads/pitesky_avian_samples1_cp/pitesky_avian_samples1/no_sample/20211217_1150_MN23913_FAR27359_a1bdbce7/fast5_pass/ --save_path /mnt/data0/MinION_reads/pitesky_avian_samples1_cp/pitesky_avian_samples1/no_sample/20211217_1150_MN23913_FAR27359_a1bdbce7/fastq_hac_cd --calib_detect --config dna_r10.4_e8.1_hac.cfg -x cuda:0 --num_callers 8
+
+#no_sample; fail
+~/ont-guppy/bin/guppy_basecaller --input_path /mnt/data0/MinION_reads/pitesky_avian_samples1_cp/pitesky_avian_samples1/no_sample/20211217_1150_MN23913_FAR27359_a1bdbce7/fast5_fail/ --save_path /mnt/data0/MinION_reads/pitesky_avian_samples1_cp/pitesky_avian_samples1/no_sample/20211217_1150_MN23913_FAR27359_a1bdbce7/fastq_hac_cd --calib_detect --config dna_r10.4_e8.1_hac.cfg -x cuda:0 --num_callers 8
+
+#20211216_1317_MN23913_FAR27359_f42a3dea; pass
+~/ont-guppy/bin/guppy_basecaller --input_path /mnt/data0/MinION_reads/pitesky_avian_samples1_cp/pitesky_avian_samples1/20211216_1317_MN23913_FAR27359_f42a3dea/fast5_pass/ --save_path /mnt/data0/MinION_reads/pitesky_avian_samples1_cp/pitesky_avian_samples1/20211216_1317_MN23913_FAR27359_f42a3dea/fastq_hac_cd --calib_detect --config dna_r10.4_e8.1_hac.cfg -x cuda:0 --num_callers 8
+
+~/ont-guppy/bin/guppy_basecaller --input_path /mnt/data0/MinION_reads/pitesky_avian_samples1_cp/pitesky_avian_samples1/20211216_1317_MN23913_FAR27359_f42a3dea/fast5_fail/ --save_path /mnt/data0/MinION_reads/pitesky_avian_samples1_cp/pitesky_avian_samples1/20211216_1317_MN23913_FAR27359_f42a3dea/fastq_hac_cd --calib_detect --config dna_r10.4_e8.1_hac.cfg -x cuda:0 --num_callers 8
+
+
+
+
+
+#super accuracy 
+ ~/ont-guppy/bin/guppy_basecaller --input_path /mnt/data0/MinION_reads/pitesky_avian_samples1_cp/pitesky_avian_samples1/20211216_1317_MN23913_FAR27359_f42a3dea/fast5_fail/ --save_path /mnt/data0/MinION_reads/pitesky_avian_samples1_cp/pitesky_avian_samples1/20211216_1317_MN23913_FAR27359_f42a3dea/fastq_sac_cd --calib_detect --config dna_r10.4_e8.1_sup.cfg -x cuda:0 --num_callers 8
+
+ONT Guppy basecalling software version 5.0.11+2b6dbff
+config file:        /home/user/ont-guppy/data/dna_r10.4_e8.1_sup.cfg
+model file:         /home/user/ont-guppy/data/template_r10.4_e8.1_sup.jsn
+input path:         /mnt/data0/MinION_reads/pitesky_avian_samples1_cp/pitesky_avian_samples1/20211216_1317_MN23913_FAR27359_f42a3dea/fast5_fail/
+save path:          /mnt/data0/MinION_reads/pitesky_avian_samples1_cp/pitesky_avian_samples1/20211216_1317_MN23913_FAR27359_f42a3dea/fastq_sac_cd
+chunk size:         2000
+chunks per runner:  256
+minimum qscore:     10
+records per file:   4000
+num basecallers:    8
+gpu device:         cuda:0
+kernel path:
+runners per device: 12
+Found 443 fast5 files to process.
+Init time: 1867 ms
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+Caller time: 2040958 ms, Samples called: 8142151613, samples/s: 3.98938e+06
+Finishing up any open output files.
+Basecalling completed successfully.
+
+~/ont-guppy/bin/guppy_basecaller --input_path /mnt/data0/MinION_reads/pitesky_avian_samples1_cp/pitesky_avian_samples1/20211216_1317_MN23913_FAR27359_f42a3dea/fast5_pass/ --save_path /mnt/data0/MinION_reads/pitesky_avian_samples1_cp/pitesky_avian_samples1/20211216_1317_MN23913_FAR27359_f42a3dea/fastq_sac_cd --calib_detect --config dna_r10.4_e8.1_sup.cfg -x cuda:0 --num_callers 8
+
+ONT Guppy basecalling software version 5.0.11+2b6dbff
+config file:        /home/user/ont-guppy/data/dna_r10.4_e8.1_sup.cfg
+model file:         /home/user/ont-guppy/data/template_r10.4_e8.1_sup.jsn
+input path:         /mnt/data0/MinION_reads/pitesky_avian_samples1_cp/pitesky_avian_samples1/20211216_1317_MN23913_FAR27359_f42a3dea/fast5_pass/
+save path:          /mnt/data0/MinION_reads/pitesky_avian_samples1_cp/pitesky_avian_samples1/20211216_1317_MN23913_FAR27359_f42a3dea/fastq_sac_cd
+chunk size:         2000
+chunks per runner:  256
+minimum qscore:     10
+records per file:   4000
+num basecallers:    8
+gpu device:         cuda:0
+kernel path:
+runners per device: 12
+Found 1773 fast5 files to process.
+Init time: 1857 ms
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+Caller time: 9067184 ms, Samples called: 36185950273, samples/s: 3.99087e+06
+Finishing up any open output files.
+Basecalling completed successfully.
+
+
+
+
+#no sample
+
+
+~/ont-guppy/bin/guppy_basecaller --input_path /mnt/data0/MinION_reads/pitesky_avian_samples1_cp/pitesky_avian_samples1/no_sample/20211217_1150_MN23913_FAR27359_a1bdbce7/fast5_pass/ --save_path /mnt/data0/MinION_reads/pitesky_avian_samples1_cp/pitesky_avian_samples1/no_sample/20211217_1150_MN23913_FAR27359_a1bdbce7/fastq_sac_cd --calib_detect --config dna_r10.4_e8.1_sup.cfg -x cuda:0 --num_callers 8
+
+ONT Guppy basecalling software version 5.0.11+2b6dbff
+config file:        /home/user/ont-guppy/data/dna_r10.4_e8.1_sup.cfg
+model file:         /home/user/ont-guppy/data/template_r10.4_e8.1_sup.jsn
+input path:         /mnt/data0/MinION_reads/pitesky_avian_samples1_cp/pitesky_avian_samples1/no_sample/20211217_1150_MN23913_FAR27359_a1bdbce7/fast5_pass/
+save path:          /mnt/data0/MinION_reads/pitesky_avian_samples1_cp/pitesky_avian_samples1/no_sample/20211217_1150_MN23913_FAR27359_a1bdbce7/fastq_sac_cd
+chunk size:         2000
+chunks per runner:  256
+minimum qscore:     10
+records per file:   4000
+num basecallers:    8
+gpu device:         cuda:0
+kernel path:
+runners per device: 12
+Found 1817 fast5 files to process.
+Init time: 1826 ms
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+Caller time: 9807196 ms, Samples called: 38972119999, samples/s: 3.97383e+06
+Finishing up any open output files.
+Basecalling completed successfully.
+
+
+~/ont-guppy/bin/guppy_basecaller --input_path /mnt/data0/MinION_reads/pitesky_avian_s
+amples1_cp/pitesky_avian_samples1/no_sample/20211217_1150_MN23913_FAR27359_a1bdbce7/fast5_fail/ --save_path /mnt/data0/MinION_reads/pitesky_avian_samples1_cp/pitesky_avian_samples1/no_sample/20211217_1150_MN23913_FAR27359_a1bdbce7/fastq
+_sac_cd --calib_detect --config dna_r10.4_e8.1_sup.cfg -x cuda:0 --num_callers 8
+
+
+ONT Guppy basecalling software version 5.0.11+2b6dbff
+config file:        /home/user/ont-guppy/data/dna_r10.4_e8.1_sup.cfg
+model file:         /home/user/ont-guppy/data/template_r10.4_e8.1_sup.jsn
+input path:         /mnt/data0/MinION_reads/pitesky_avian_samples1_cp/pitesky_avian_samples1/no_sample/20211217_1150_MN23913_FAR27359_a1bdbce7/fast5_fail/
+save path:          /mnt/data0/MinION_reads/pitesky_avian_samples1_cp/pitesky_avian_samples1/no_sample/20211217_1150_MN23913_FAR27359_a1bdbce7/fastq_sac_cd
+chunk size:         2000
+chunks per runner:  256
+minimum qscore:     10
+records per file:   4000
+num basecallers:    8
+gpu device:         cuda:0
+kernel path:
+runners per device: 12
+Found 470 fast5 files to process.
+Init time: 1926 ms
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+Caller time: 2438204 ms, Samples called: 9672979161, samples/s: 3.96726e+06
+Finishing up any open output files.
+Basecalling completed successfully.
+
+
+
+
+read splitting
+
+. ~/venv/bin/activate
+
+
+
+
+#sup - read splitting
+
+duplex_tools split_on_adapter /mnt/data0/MinION_reads/pitesky_avian_samples1_cp/pitesky_avian_samples1/20211216_1317_MN23913_FAR27359_f42a3dea/fastq_sac_cd/pass /mnt/data0/MinION_reads/pitesky_avian_samples1_cp/pitesky_avian_samples1/20211216_1317_MN23913_FAR27359_f42a3dea/fastq_sac_cd/split_pass PCR
+444it [00:23, 18.64it/s]
+Split 137947 reads kept 1622394 reads
+
+duplex_tools split_on_adapter /mnt/data0/MinION_reads/pitesky_avian_samples1_cp/pitesky_avian_samples1/no_sample/20211217_1150_MN23913_FAR27359_a1bdbce7/fastq_sac_cd/pass /mnt/data0/MinION_reads/pitesky_avian_samples1_cp/pitesky_avian_samples1/no_sample/20211217_1150_MN23913_FAR27359_a1bdbce7/fastq_sac_cd/split_pass PCR
+455it [00:19, 23.36it/s]
+Split 108714 reads kept 1327789 reads
+
+
+#barcoding
+
+~/ont-guppy/bin/guppy_barcoder --require_barcodes_both_ends -i /mnt/data0/MinION_reads/pitesky_avian_samples1_cp/pitesky_avian_samples1/20211216_1317_MN23913_FAR27359_f42a3dea/fastq_sac_cd/split_pass -s /mnt/data0/MinION_reads/pitesky_avian_samples1_cp/pitesky_avian_samples1/20211216_1317_MN23913_FAR27359_f42a3dea/fastq_sac_cd/demultiplexed_split_pass --arrangements_files "barcode_arrs_pcr12.cfg barcode_arrs_pcr96.cfg" -x cuda:0 --worker_threads 8
+
+
+
+
+#rebarcode after sup basecalling
+
+
+~/ont-guppy/bin/guppy_barcoder --require_barcodes_both_ends -i /mnt/data0/MinION_reads/pitesky_avian_samples1_cp/pitesky_avian_samples1/20211216_1317_MN23913_FAR27359_f42a3dea/fastq_sac_cd/split_pass -s /mnt/data0/MinION_reads/pitesky_avian_samples1_cp/pitesky_avian_samples1/20211216_1317_MN23913_FAR27359_f42a3dea/fastq_sac_cd/demultiplexed_split_pass --arrangements_files "barcode_arrs_pcr12.cfg barcode_arrs_pcr96.cfg" -x cuda:0 --worker_threads 8
+
+ONT Guppy barcoding software version 5.0.11+2b6dbff
+input path:         /mnt/data0/MinION_reads/pitesky_avian_samples1_cp/pitesky_avian_samples1/20211216_1317_MN23913_FAR27359_f42a3dea/fastq_sac_cd/split_pass
+save path:          /mnt/data0/MinION_reads/pitesky_avian_samples1_cp/pitesky_avian_samples1/20211216_1317_MN23913_FAR27359_f42a3dea/fastq_sac_cd/demultiplexed_split_pass
+arrangement files:  barcode_arrs_pcr12.cfg barcode_arrs_pcr96.cfg
+lamp arr. files:    barcode_arrs_ncov8.cfg barcode_arrs_ncov96.cfg barcode_arrs_multivirus1.cfg barcode_arrs_multivirus8.cfg
+min. score front:   60
+min. score rear:    60
+gpu device:         cuda:0
+
+Found 444 input files.
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+Done in 348498 ms.
+
+
+~/ont-guppy/bin/guppy_barcoder --require_barcodes_both_ends -i /mnt/data0/MinION_reads/pitesky_avian_samples1_cp/pitesky_avian_samples1/no_sample/20211217_1150_MN23913_FAR27359_a1bdbce7/fastq_sac_cd/split_pass -s /mnt/data0/MinION_reads/pitesky_avian_samples1_cp/pitesky_avian_samples1/no_sample/20211217_1150_MN23913_FAR27359_a1bdbce7/fastq_sac_cd/demultiplexed_split_pass --arrangements_files "barcode_arrs_pcr12.cfg barcode_arrs_pcr96.cfg" -x cuda:0 --worker_threads 8
+
+
+
+ONT Guppy barcoding software version 5.0.11+2b6dbff
+input path:         /mnt/data0/MinION_reads/pitesky_avian_samples1_cp/pitesky_avian_samples1/no_sample/20211217_1150_MN23913_FAR27359_a1bdbce7/fastq_sac_cd/split_pass
+save path:          /mnt/data0/MinION_reads/pitesky_avian_samples1_cp/pitesky_avian_samples1/no_sample/20211217_1150_MN23913_FAR27359_a1bdbce7/fastq_sac_cd/demultiplexed_split_pass
+arrangement files:  barcode_arrs_pcr12.cfg barcode_arrs_pcr96.cfg
+lamp arr. files:    barcode_arrs_ncov8.cfg barcode_arrs_ncov96.cfg barcode_arrs_multivirus1.cfg barcode_arrs_multivirus8.cfg
+min. score front:   60
+min. score rear:    60
+gpu device:         cuda:0
+
+Found 455 input files.
+
+0%   10   20   30   40   50   60   70   80   90   100%
+|----|----|----|----|----|----|----|----|----|----|
+***************************************************
+Done in 290421 ms.
+
+
+
+#combine both 'runs'
+#from within no_sample.../fastq_sac/demultiplexed_split_pass
+for i in ./barcode*;
+do bn=$(basename $i );
+cp ${bn}/*.fastq ../../../../20211216_1317_MN23913_FAR27359_f42a3dea/fastq_sac_cd/demultiplexed_split_pass/${bn}/;
+done
+
+moved barcode19, 19, 68 manually
+
+ cp ./barcode68/ ../../../../20211216_1317_MN23913_FAR27359_f42a3dea/fastq_sac_cd/demultiplexed_split_pass/ -r
+ cp ./barcode19/ ../../../../20211216_1317_MN23913_FAR27359_f42a3dea/fastq_sac_cd/demultiplexed_split_pass/ -r
+
+#convert to fasta
+for i in barcode*/*.fastq; do sed -n '1~4s/^@/>/p;2~4p' $i > $i.fasta; done
+
+#NOpaste into one big doc
+#cat barcode*/*.fasta >> all_swab.fasta
+
+#DO INSTEAD: make one fasta for each barcode
+for i in barcode*;
+do bn=$(basename $i);
+cat ./${bn}/*.fasta >> ./${bn}/${bn}.fasta;
+done
+
+#mv to analysis dir
+for i in barcode*;
+do bn=$(basename $i);
+mv ./${bn}/${bn}.fasta ~/Documents/CM_aiv_detection_environment/;
+done
+
+
+#generate report - ?
+wc -l *.fasta | awk '{print $1/2" " $2}' | sed '$d'  >> demultiplexing_by_sample.txt
+
+#make blast database
+makeblastdb -in AllFluGenomicFastaResults.fasta -dbtype nucl -out new_all_avian_flu
+
+#from aiv script:
+#This command uses GNU parallel to conduct BLAST searches in parallel for each demultiplexed file
+#for loop blast code ... not parallel though...
+for i in barcode*.fasta; 
+do bn=$(basename $i .fasta)
+blastn -db new_all_avian_flu -query ${bn}*.fasta -out ${bn}.out -max_target_seqs 1 -outfmt 6';
+done
+
+
+#final blast code:
+ls barcode*.fasta | awk -F'[.]' '{print $1}'| parallel -j+0 --eta 'blastn -db new_all_avian_flu -query {.}.fasta -out {.}.out  -max_target_seqs 1 -outfmt 6'
+ 
+
+#SKIP: Export info to our running report
+#wc -l *.out >> demultiplexing_assignment_report.txt
+
+#Now add the number of reads matching the avian flu database to the file avian_blast_matches.txt
+wc -l *.out | awk '{print $1" " $2}' | sed '$d' > avian_blast_matches.txt
+
+
+#for all of them:
+
+
+#Finally look up metadata for the closest blast matches for each read
+#Now use the .out files to generate a list of GI's to lookup against database
+
+for file in *.out; 
+do awk '{print $2}' $file | awk -F ":" '{print $2}' | awk -F "|" '{print $1}' > ${file%.out}.tmp;
+done
+
+#Use that file to get matches from the database
+for file in *.tmp; 
+do grep -f $file data/AllFluGenomicFastaResults.fasta > "${file%.out}.tab";
+done
+
+
+
+
+
+
+
+
+
+rename *.out files:
+
+while read -r line; do
+   value1=$(echo "$line"| awk -F" "  '{print $1}')
+   value2=$(echo "$line"| awk -F" "  '{print $2}')
+   cp ${value1}.out ${value2}.out
+done < renaming.csv
+
+
+
+
+
+```
