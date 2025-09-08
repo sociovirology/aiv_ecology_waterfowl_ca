@@ -1,0 +1,70 @@
+# Viral Ecology of Avian Influenza Viruses in Waterfowl of the Central Valley of California using MinION Sequencing
+
+## Script: all_data_coding_log.rmd
+This R markdown notebook provides a log of analyses and a todo list to monitor progress towards data analysis.
+
+This script is part of the following manuscript:
+### "Prevalence and Viral Ecology of Avian Influenza of Waterfowl in the Central Valley of California"  
+###Madeline M. McCuen | Maurice E. Pitesky | Jeff J. Buler | Sarai Acosta | Alexander Wilcox | Ronald F. Bond | Samuel L. Díaz-Muñoz
+
+
+# To Do
+-Organize Information on Runs (finish completing data table)
+-Locate run files (this turned out to not be trivial)
+-Continue with analysis and base calling of the ones I have
+-Organize barcode files, mapping to samples
+-Collect and organize metadata
+-Cross checks of samples and metadata
+-Set up work environment between Rosalind, Franklin, and my laptop
+-Run "small scale" tests on one season with complete set (water, soil, swabs)
+  -Update the code to not rely solely on FluDB to identify the influenza reads  
+  -Use reference free assembly - what Courtney used for contigs seems good
+-Sketch out data I would like to generate for each paper, including data that I *could* generate
+-Set up the coding infrastructure to create a pipeline for all the data (i.e. top level code bifurcate by runs)
+
+
+# Daily Log
+## Sept 8 2025
+-More searching for files, found Delaware. 
+
+## Sept 4 2025
+-Built table for run information
+-Entered flow cell IDs
+-Located files
+
+## May 21, 2025
+-Data organization meeting with Ivy
+-Locating run files 
+-Finding metadata
+-Starting Coding Notebook and R environment
+
+## May 22, 2025
+(little time)
+-
+
+## 1.2 Basecalling and Demultiplexing
+Thi
+
+```{bash}
+#Count fast5 reads
+```
+
+
+# 3. Match Sequences to Flu DB 
+
+# 4. 
+
+
+# 4. Avian Ecology 
+
+## 4.1
+
+## 4.2
+
+
+## 4.3 
+Pr
+
+## 4.4. Comparison to CWT abundance data? Waterfowl Density versus Positives
+
+## 4.5. 
